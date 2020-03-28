@@ -1,9 +1,9 @@
-import "./styles.css";
+let callback = event => {
+  console.log(event)
+}
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use Parcel to bundle this sandbox, you can find more info about Parcel
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+let click = callback => {
+  document.addEventListener("click", callback)
+}
+
+click(callback)
